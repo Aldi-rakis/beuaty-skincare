@@ -2,14 +2,17 @@ import React from 'react';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Footer from './components/Footer';
+import AppRoutes from './Route/route';
 
 function App() {
   return (
-    <div className="font-sans">
-      <Navbar />
-      <Home />
-      <Footer />
-    </div>
+  <>
+  
+  <Navbar />
+    <AppRoutes />
+      <Footer /> </>
+      
+    
   );
 }
 

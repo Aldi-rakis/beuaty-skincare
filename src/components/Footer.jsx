@@ -52,34 +52,34 @@ const Footer = () => {
                 <div className="w-full md:w-1/3 flex justify-start md:justify-center flex-col items-start md:items-center  "> {/* Menambahkan kembali text-center/left seperti sebelumnya, dan menghilangkan justify-end/items-end dari parent */}
                     <h3 className="text-2xl md:text-3xl font-semibold mb-6 " >contact</h3>
                     <div className="space-y-4 md:ml-40"> 
-                        <p className="flex items-center justify-start md:justify-start text-lg md:text-sm">
+                        <div className="flex items-center justify-start md:justify-start text-lg md:text-sm">
                            <img className='mr-2 w-6' src={wa} alt="" />
                           
                             <div className="flex flex-col text-md">
                                 <span>Admin - 1</span>
                                 <span>+62 822-4930-3425</span>
                             </div>
-                        </p>
-                        <p className="flex items-center justify-start md:justify-start text-lg md:text-sm">
+                        </div>
+                        <div className="flex items-center justify-start md:justify-start text-lg md:text-sm">
                            <img className='mr-2 w-6' src={wa} alt="" />
                             <div className="flex flex-col">
                                 <span>Admin - 2</span>
                                 <span>+62 822-9561-6146</span>
                             </div>
-                        </p>
-                        <p className="flex items-center justify-start md:justify-start text-lg md:text-sm">
+                        </div>
+                        <div className="flex items-center justify-start md:justify-start text-lg md:text-sm">
                            <img className='mr-2 w-6' src={wa} alt="" />
                             <div className="flex flex-col">
                                 <span>Admin - 3</span>
                                 <span>+62 811-2822-266</span>
                             </div>
-                        </p>
-                        <p className="flex gap-2 items-center justify-start md:justify-start text-lg md:text-sm mt-6">
+                        </div>
+                        <div className="flex gap-2 items-center justify-start md:justify-start text-lg md:text-sm mt-6">
                             <img src={ig} alt="Instagram icon" className="w-6" />
                             <a href="https://instagram.com/noorbeautycare.id" target="_blank" rel="noopener noreferrer" className="hover:underline">@noorbeautycare.id</a>
                             <img src={tiktok} alt="tiktok icon" className="w-6" />
                             <a href="https://tiktok.com/@noorbeautycare" target="_blank" rel="noopener noreferrer" className="hover:underline">noorbeautycare</a>
-                        </p>
+                        </div>
                     </div>
                 </div>
 
