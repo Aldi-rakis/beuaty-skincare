@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'nunito'; /* This is the name you'll use in Tailwind */
+  src: url('.//assets/font/Nunito.ttf') format('truetype');
+  font-weight: 400; /* Bobot reguler */
+  font-style: normal;
+  font-display: swap; /* Disarankan untuk performa */
+}
+
+@font-face {
+    font-family: 'AnsteryScript';
+    src: url('./assets/font/AnsteryScript.ttf') format('truetype');
+    
+}
+
+@theme {
+  --font-nunito: "nunito", sans-serif;
+  --font-AnsteryScript: "AnsteryScript", sans-serif; 
+ 
+}
+
+
+.stroke-text {
+  -webkit-text-stroke: 1px #ff69b4; /* warna pink */
+  color: transparent;
+}
+
+.glow-pulse::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, transparent 70%);
+  border-radius: 9999px;
+  animation: pulse 2s infinite ease-in-out;
+  z-index: 0;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.6;
+  }
+  70% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+}
