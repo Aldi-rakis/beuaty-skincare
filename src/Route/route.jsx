@@ -3,6 +3,8 @@ import Home from "../pages/Home";
 import DetailFacial from "../pages/DetailFacialWash";
 import DetailDayCream from "../pages/DetailDayCream";
 
+import Contact from "../pages/Contact";
+
 
 
 export default function AppRoutes() {
@@ -11,9 +13,12 @@ export default function AppRoutes() {
       <Route path="/" element={<Home />} />
       {/* <Route path="/about" element={<About />} />
       <Route path="/contact" element={<Contact />} /> */}
-      <Route path="/facial-wash" element={<DetailFacial />} />
+      <Route path="/facialwash" element={<DetailFacial />} />
 
-      <Route path="/day-cream" element={<DetailDayCream />} />
+      <Route path="/daycream" element={<DetailDayCream />} />
+
+
+      <Route path="/resseler" element={<Contact />} />
       <Route path="*" element={<h1>404 - Not Found</h1>} />
     </Routes>
   );

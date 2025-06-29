@@ -8,12 +8,12 @@ import ig from '../assets/image/footer/ig.png';
 import tiktok from '../assets/image/footer/tiktok.png';
 const Footer = () => {
     return (
-        <footer className="bg-gradient-to-r from-purple-100 to-white py-12 relative overflow-hidden" style={{ backgroundColor: '#fcf8f0' }}>
+        <footer className="bg-gradient-to-r from-[#fdfbf8] to-[#fcf8f0] pt-12 relative overflow-hidden" style={{ backgroundColor: '#fcf8f0' }}>
             {/* Background elements */}
 
 
 
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex text-[#B69544] flex-col md:flex-row justify-between items-start md:items-center text-brown-800 relative z-10">
+            <div className="font-nunito max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex text-[#B69544] flex-col md:flex-row justify-between items-start md:items-center text-brown-800 relative z-10">
                 {/* Product Section */}
                 <div className="mb-8 md:mb-0 md:w-1/3 justify-center flex flex-col items-center">
                     <h3 className="text-2xl md:text-3xl font-semibold mb-6 " >Product</h3>
@@ -86,8 +86,8 @@ const Footer = () => {
             </div>
 
             {/* Copyright Section */}
-            <div className="text-center mt-12 pt-8 border-t border-orange-200 text-brown-700" style={{ borderColor: '#F0EAD6', color: '#B38B6D' }}>
-                &copy; 2025 All Rights Reserved - Noor Beauty Care
+            <div className="text-center items-center flex justify-center bg-[#F4E9D8] mt-12 py-4 border-t border-orange-200 text-brown-700" style={{ borderColor: '#B69544', color: '#B69544' }}>
+              <p>  &copy; 2025 All Rights Reserved - Noor Beauty Care</p>
             </div>
         </footer>
 

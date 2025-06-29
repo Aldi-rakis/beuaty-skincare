@@ -1,6 +1,7 @@
 // src/components/Navbar.jsx
 import { useState, useEffect } from "react";
 import logo from "../assets/image/logo-noor.png";
+import externalLinkblack from "../assets/image/external-link-black.png";
 
 import { Link, useLocation } from "react-router-dom";
 
@@ -49,10 +50,10 @@ const handleClickOutside = () => {
               ☰
             </button>
           </div>
-          <nav className="hidden md:flex gap-14 items-center text-sm font-medium text-[#4A108B]">
+          <nav className="hidden  md:flex gap-14 items-center text-lg font-medium text-[#4A108B]">
             <Link to="/" className={`hover:text-blue-400 ${currentPath === "/" ? "text-blue-400 " : ""}`}>Home</Link>
-            <Link to="/tentang" className={`hover:text-blue-400 ${currentPath === "/tentang" ? "text-[#4A108B] " : ""}`}>Detail</Link>
-          <Link to="/tentang" className={`hover:text-blue-400 ${currentPath === "/tentang" ? "text-[#4A108B] " : ""}`}>Resseler</Link>
+            <Link to="/facialwash" className={`hover:text-blue-400 ${currentPath === "/tentang" ? "text-[#4A108B] " : ""}`}>Detail</Link>
+          <Link to="/resseler" className={`hover:text-blue-400 ${currentPath === "/tentang" ? "text-[#4A108B] " : ""}`}>Resseler</Link>
           </nav>
 
         </div>
@@ -65,9 +66,16 @@ const handleClickOutside = () => {
 
          <div className="w-1/3 text-[#4A108B] gap-4 hidden md:flex text-center justify-end  text-md md:text-md">
         
-           <p className="font-nunito">Contact</p>
-           <p className="font-nunito">Order</p>
-
+<p className="py-1 font-nunito text-purple-800 relative w-max cursor-pointer transition duration-300 ease-in-out hover:text-[#4A108B] hover:scale-105">
+  Contact
+  <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-[#4A108B] transition-all duration-500 ease-in-out hover:w-full"></span>
+</p>
+<p className="relative px-2 py-1 border border-[#4A108B] rounded font-nunito text-[#4A108B] overflow-hidden group w-max cursor-pointer">
+  <span className="relative z-10 transition duration-300 group-hover:text-white">
+    Order
+  </span>
+  <span className="absolute left-0 top-0 w-0 h-full bg-[#4A108B] transition-all duration-500 ease-in-out group-hover:w-full z-0" />
+</p>
 
         </div>
 
@@ -75,7 +83,7 @@ const handleClickOutside = () => {
 
       {menuOpen && (
         <div
-          className={`md:hidden bg-white px-4 pb-4 text-black transform transition-all duration-300 ease-in-out origin-top ${
+          className={`md:hidden bg-[#EEE6D9] px-4 pb-4 text-black transform transition-all duration-300 ease-in-out origin-top ${
             menuOpen ? "scale-y-100" : "scale-y-0 h-0 overflow-hidden"
           }
           ${closing ? 'translate-y-[-10px] opacity-0' : ''}`
@@ -83,11 +91,9 @@ const handleClickOutside = () => {
         } 
           onClick={handleClickOutside}
         >          <Link to="/" className="block py-2 border-b border-gray-600 hover:bg-gray-100">Beranda</Link>
-          <Link to="/tentang" className="block py-2 border-b border-gray-600 hover:bg-gray-100">Tentang Kami</Link>
-          <Link to="/layanan" className="block py-2 border-b border-gray-600 hover:bg-gray-100">Layanan</Link>
-          <a href="https://desaarmadab3.com/khs/" target="_blank" rel="noopener noreferrer" className=" py-2 flex items-center gap-2 hover:bg-gray-100">
-            Other Site <span><img className="w-4" src={externalLinkblack} alt="" /></span>
-          </a>
+          <Link to="/facialwash" className="block py-2 border-b border-gray-600 hover:bg-gray-100">Detail</Link>
+          <Link to="/resseler" className="block py-2 border-b border-gray-600 hover:bg-gray-100">Resseler</Link>
+          
         </div>
       )}
     </header>
