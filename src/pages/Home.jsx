@@ -265,7 +265,10 @@ const Home = () => {
 
         <div className="font-nunito grid grid-cols-1 md:grid-cols-3 gap-8">
           {productList.map((product, index) => (
-            <div
+            <motion.div 
+          initial={{ opacity: 0, x: -30 }}
+    whileInView={{ opacity: 1, x: 0 }}
+    transition={{ delay: index * 0.2, duration: 0.6, ease: 'easeOut' }}
               key={index}
               className="flex flex-col items-center text-center rounded-lg p-6   transition-all duration-300 transform hover:-translate-y-1 hover:scale-[1.02]"
             >
@@ -289,7 +292,7 @@ const Home = () => {
                 </button>
               </a>
 
-            </div>
+            </motion.div>
           ))}
 
         </div>

@@ -1,8 +1,10 @@
 import React from 'react'
 import Daycream from '../assets/image/daycream-detail.png'
 import Daycream2 from '../assets/image/daycream-detail2.png'
+import Nightcream from '../assets/image/nightcrem-detail.png'
+import Nightcream2 from '../assets/image/nightcream-detail2.png'
 import { motion } from 'framer-motion'
-const DetailDayCream = () => {
+const DetailNightCream = () => {
 
   const listVariants = {
     hidden: {},
@@ -38,7 +40,7 @@ const DetailDayCream = () => {
             transition={{ duration: 0.5 }}
 
             className="w-full md:w-1/2">
-            <img src={Daycream} alt="Facial Wash" className="w-full max-w-md mx-auto" />
+            <img src={Nightcream} alt="Facial Wash" className="w-full max-w-md mx-auto" />
           </motion.div>
 
           {/* Konten Teks */}
@@ -49,7 +51,7 @@ const DetailDayCream = () => {
               transition={{ duration: 0.5 }}
 
               className="text-4xl sm:text-5xl md:text-7xl font-bold text-[#DAA854] drop-shadow-[0_2px_4px_rgba(0,0,0,0.2)]">
-              Day Cream
+              Night Cream
             </motion.div>
 
             <motion.p
@@ -58,8 +60,7 @@ const DetailDayCream = () => {
               transition={{ duration: 0.5 }}
 
               className="text-[#DAA854] text-base sm:text-lg md:text-xl">
-              Day Cream menjaga kulit tetap sehat, cerah, dan terlindungi dari sinar matahari serta polusi. Cocok untuk perawatan harian agar wajah tampak segar dan bercahaya.
-            </motion.p>
+              Night cream ini diformulasikan khusus untuk menjaga kelembapan kulit selama Anda tidur. Dengan kandungan yang menutrisi, membantu memperbaiki lapisan kulit, membuatnya terasa lebih halus, lembut, dan tampak segar di pagi hari.            </motion.p>
 
             <motion.h2
               initial={{ opacity: 0, x: 20 }}
@@ -76,8 +77,7 @@ const DetailDayCream = () => {
               transition={{ duration: 0.5 }}
 
               className="text-[#DAA854] text-sm sm:text-base md:text-xl">
-              Niacinamide, Centella Asiatica Extract, Glycyrrhiza Glabra (Licorice) Root Extract, Panthenol, 3-O-Ethyl Ascorbic Acid (Vitamin C), Titanium Dioxide, Zinc Oxide, Tocopheryl Acetate (Vitamin E), Salicylic Acid, Allantoin, Dimethicone.
-            </motion.p>
+              Niacinamide, Tranexamic Acid, Lactic Acid, Glycolic Acid, Salicylic Acid, 3-O-Ethyl Ascorbic Acid (Vitamin C), Panthenol, Allantoin, Hyaluronic Acid Complex, Hydrolyzed Collagen, Bisabolol, Tetrahydro diferuloylmethane, Tocopheryl Acetate (Vitamin E).            </motion.p>
           </div>
         </div>
       </section>
@@ -117,11 +117,11 @@ const DetailDayCream = () => {
                   viewport={{ once: false }} // agar animasi hanya terjadi sekali saat scroll masuk
                 >
                   {[
-                    "Hydrates & Moisturizes",
-                    "Brightens Skin",
-                    "Protects from Sun Damage",
-                    "Soothes & Repairs",
-                    "Antioxidant Rich",
+                    "Deep Hydration",
+                    "Brightens & Evens Skin Tone",
+                    "Soothes & Calms Skin",
+                    "Overnight Skin Renewal",
+                    "Antioxidant Protection",
                   ].map((text, index) => (
                     <motion.li key={index} variants={itemVariants}>
                       {text}
@@ -142,8 +142,8 @@ const DetailDayCream = () => {
                 >
                   {[
                     "Gel",
-                    "Ringan dan Lembut",
-                    "Tidak terlalu berbusa",
+                    "Halus dan Lembut",
+                    "Gampang diblend",
                     "Lebih lembut dan tidak kering",
                     "Segar di kulit",
                   ].map((text, index) => (
@@ -156,17 +156,17 @@ const DetailDayCream = () => {
             </div>
 
             <a
-            
-              href="https://wa.me/6282295616146?text=Halo%20Kak%2C%20saya%20tertarik%20produk%Day%20Cream%20Noor%20Beauty%20nya"
+
+              href="https://wa.me/6282295616146?text=Halo%20Kak%2C%20saya%20tertarik%20produk%20Night%20Cream%20Noor%20Beauty%20nya"
               target="_blank"
               rel="noopener noreferrer"
             >
               <motion.button
-               initial={{ opacity: 0, x: -20, scale: 1 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1 }}
-              whileHover={{ scale: 1.03 }} 
-              className="bg-[#FECFCF] text-white font-semibold px-6 py-3 rounded shadow hover:bg-[#fcbaba] transition">
+                initial={{ opacity: 0, x: -20, scale: 1 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 1 }}
+                whileHover={{ scale: 1.03 }}
+                className="bg-[#FECFCF] text-white font-semibold px-6 py-3 rounded shadow hover:bg-[#fcbaba] transition">
                 Coba Sekarang
               </motion.button>
             </a>
@@ -184,7 +184,7 @@ const DetailDayCream = () => {
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5 }}
-                src={Daycream2}
+                src={Nightcream2}
                 alt="Produk Facial Wash"
                 className="relative z-10 w-full rounded-lg"
               />
@@ -196,4 +196,4 @@ const DetailDayCream = () => {
   )
 }
 
-export default DetailDayCream
+export default DetailNightCream

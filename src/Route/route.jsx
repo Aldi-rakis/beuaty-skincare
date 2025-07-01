@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import Home from "../pages/Home";
 import DetailFacial from "../pages/DetailFacialWash";
 import DetailDayCream from "../pages/DetailDayCream";
+import DetailNightCream from "../pages/DetailDayNighCream";
 
 import Contact from "../pages/Contact";
 
@@ -16,6 +17,7 @@ export default function AppRoutes() {
       <Route path="/facialwash" element={<DetailFacial />} />
 
       <Route path="/daycream" element={<DetailDayCream />} />
+      <Route path="/nightcream" element={<DetailNightCream />} />
 
 
       <Route path="/resseler" element={<Contact />} />

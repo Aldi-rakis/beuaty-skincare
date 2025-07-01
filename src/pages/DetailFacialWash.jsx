@@ -1,5 +1,6 @@
 import React from 'react'
 import Facialwash from '../assets/image/facialwash-detail.png'
+import { motion } from 'framer-motion'
 
 const DetailFacialWash = () => {
   return (
@@ -9,36 +10,57 @@ const DetailFacialWash = () => {
   <div className="pt-20 h-screen flex flex-col md:flex-row px-6 sm:px-10 md:px-20  bg-[#FDF9F2] justify-center gap-10 items-center">
     
     {/* Gambar */}
-    <div className="w-full md:w-1/2">
+    <motion.div
+     initial={{ opacity: 0, x: -50 }}
+     whileInView={{ opacity: 1, x: 0 }}
+     transition={{ duration: 0.5 }}
+     className="w-full md:w-1/2">
       <img src={Facialwash} alt="Facial Wash" className="w-full max-w-md mx-auto" />
-    </div>
+    </motion.div>
 
     {/* Konten Teks */}
     <div className="w-full md:w-1/2 flex font-nunito flex-col gap-5 px-2">
-      <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-[#FE78B3] drop-shadow-[0_2px_4px_rgba(0,0,0,0.2)]">
+      <motion.h1
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      className="text-4xl sm:text-5xl md:text-7xl font-bold text-[#FE78B3] drop-shadow-[0_2px_4px_rgba(0,0,0,0.2)]">
         Facial Wash
-      </h1>
+      </motion.h1>
 
-      <p className="text-[#000] text-base sm:text-lg md:text-xl">
+      <motion.p
+       initial={{ opacity: 0, y: 20 }}
+       whileInView={{ opacity: 1, y: 0 }}
+       transition={{ duration: 0.5 }}
+       className="text-[#000] text-base sm:text-lg md:text-xl">
         Facial wash untuk perawatan kulit sehat yang membersihkan dengan lembut + melembapkan sambil mencerahkan & meratakan tone.
-      </p>
+      </motion.p>
 
-      <h2 className="text-2xl sm:text-3xl font-bold text-[#FE78B3] drop-shadow-[0_2px_4px_rgba(0,0,0,0.2)]">
+      <motion.p
+       initial={{ opacity: 0, x: 30 }}
+       whileInView={{ opacity: 1, x: 0 }}
+       transition={{ duration: 0.5 }}
+       className="text-2xl sm:text-3xl font-bold text-[#FE78B3] drop-shadow-[0_2px_4px_rgba(0,0,0,0.2)]">
         Ingredient
-      </h2>
+      </motion.p>
 
-      <p className="text-[#000] text-sm sm:text-base md:text-xl">
+      <motion.p 
+      initial={{ opacity: 0, x: 30 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.5 }}
+      
+      className="text-[#000] text-sm sm:text-base md:text-xl">
         Aqua, Sodium Laureth Sulfate, Cocamidopropyl Betaine, Sodium Chloride, Glycerin, Cocamide DEA, DMDM Hydantoin,
         Niacinamide, Sodium PCA, Glycyrrhiza Glabra (Licorice) Root Extract, Panthenol, Polyquaternium-7,
         Tetrasodium EDTA, Coconut Fatty Acid Diethanolamide, Propylene Glycol, CI 14720, Lactic Acid,
         C12-18 Fatty Acids Methyl Esters, CI 42090, Sodium Hydroxide.
-      </p>
+      </motion.p>
     </div>
   </div>
 </section>
 
 
-     <section className="bg-[#FDF9F2] px-6 pb-12">
+     <section className="bg-[#FDF9F2] px-6 pb-12 font-nunito">
          <h2 className="mb-4 text-2xl md:text-3xl font-bold text-center text-gray-900">
             Product Highlights
           </h2>
@@ -47,12 +69,17 @@ const DetailFacialWash = () => {
         {/* Text Area */}
         <div className="flex-1 space-y-6">
          
-          <p className="text-gray-700 leading-relaxed">
+          <motion.p
+           initial={{ opacity: 0, x: -30 }}
+           whileInView={{ opacity: 1, x: 0 }}
+           transition={{ duration: 0.5 }}
+           
+           className="text-gray-700 leading-relaxed">
             Sensasi Yang Kamu Rasakan Seperti Membilas Hari Yang Panjang — Segar, Ringan, Dan Menenangkan.
             Kulit Terasa Bersih, Halus, Dan Tetap Lembap Tanpa Rasa Kering Atau Tertarik
-          </p>
+          </motion.p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-2 gap-6">
             {/* Glow Benefits */}
             <div>
               <h3 className="font-semibold text-gray-800 mb-2">Glow-Boosting Benefits</h3>
